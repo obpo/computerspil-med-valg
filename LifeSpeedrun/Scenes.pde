@@ -31,7 +31,7 @@ void loadMonolouge() {
  
 void loadHomeScene() {
 
-    Line line0 = new Line("Du er lige stået op hvad gør du", "Narrator");
+    Line line0 = new Line("Du er lige stået op hvad gør du", "");
     line0.addObject("Door", 166, 203, 58, 91, 1);
     line0.addObject("Clothes", 472, 342, 212, 128, 2);
     line0.addObject("Newspaper", 244, 386, 127, 100, 3);
