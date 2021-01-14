@@ -56,7 +56,7 @@ void sceneTransitionHandler() { //<>//
       break;
       
     default:
-      println("Scene is not recognised. Has it been added?");
+      println("Scene is not recognised. Was it spelled correctly?");
       break;
   }
   
@@ -79,7 +79,7 @@ void imgHandler() { //<>//
     case "bg_scene_thief.png":
       image(scene_thief, 0, 0, width, height);
       break;
-    case "":
+    case "bg_scene_fart.png":
       image(scene_fart, 0, 0, width, height);
       break;
     case "bg_scene_outside.png":
@@ -144,7 +144,7 @@ void imgHandler() { //<>//
       break;
     
     default:
-      println("Image is not registered. Has it been added?");
+      println("Image is not registered. Was it spelled correctly?");
       break;
   }
   
