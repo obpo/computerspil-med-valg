@@ -34,6 +34,18 @@ void sceneTransitionHandler() { //<>//
     case "outsideScene":
       currentScene = outsideScene;
       break;
+    
+    case "pianoAdScene":
+      currentScene = pianoAdScene;
+      break;
+    
+    case "carScene":
+      currentScene = carScene;
+      break;
+    
+    case "craneScene":
+      currentScene = craneScene;
+      break;
       
     case "clothesScene":
       currentScene = clothesScene;
