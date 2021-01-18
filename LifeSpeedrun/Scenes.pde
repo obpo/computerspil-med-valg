@@ -125,6 +125,7 @@ void loadCarScene() {
   Line line2 = new Line("Det var tæt på! Hvad skulle man dog gøre efter sådan en nær-døds-oplevelse?", "");
   line2.addButton("Gå tilbage til lejligheden og tag et hvil.", 5);
   line2.addButton("Tag ud og handle, der mangler sikkert mælk i køleskabet.", 6);
+  carScene.addLine(line2);
   
   Line line3 = new Line("Du troede det ville virke, selvfølgelig undgik billisten dig!", "");
   carScene.addLine(line3);
@@ -135,11 +136,11 @@ void loadCarScene() {
   carScene.addLine(line4);
   
   Line line5 = new Line("På vejen tilbage til din lejlighed så du en fugl. Ej hvor spændende.", "");
-  line5.changeScene("homeScene", 5);
+  line5.changeScene("homeScene", 6);
   carScene.addLine(line5);
   
   Line line6 = new Line("Efter en tur i supermarkedet var det tid til at komme hjem med den manglende mælk og få et hvil.", "");
-  line6.changeScene("homeScene", 5);
+  line6.changeScene("homeScene", 6);
   carScene.addLine(line6);
   
 }

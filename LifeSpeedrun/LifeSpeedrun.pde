@@ -64,7 +64,7 @@ void initGame() {
   // Ping Handlers to sync variables
   musicHandler();
   lineTransitionHandler();
-
+ //<>//
 }
 
 void setup(){ //<>//
@@ -123,6 +123,7 @@ void draw() {
  
   imgHandler();    // Draw Images
   textHandler();   // Write Text
+    println(position);
   
 }
 
@@ -133,6 +134,7 @@ void mouseClicked() {
   //print("x");
   //print(mouseY);
   //println();
+
   
   // If it is a normal go to next scene
   if (currentScene.lines.get(position).interactable == false) {
