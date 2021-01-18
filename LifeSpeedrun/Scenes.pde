@@ -11,8 +11,8 @@ Scene outsideScene = new Scene("bg_scene_outside.png");
   Scene craneScene = new Scene("bg_scene_crane.png");
 Scene clothesScene = new Scene("bg_scene_thief.png");
 Scene newsScene = new Scene("bg_scene_news.png");
-Scene computorScene = new Scene("bg_scene_pc.png");
-Scene gasStationScene = new Scene("bg_scene_job.png");
+  Scene gasStationScene = new Scene("bg_scene_job.png");
+Scene computerScene = new Scene("bg_scene_pc.png");
 Scene presidentialScene = new Scene("bg_scene_mrpresident.png");
 
 
@@ -129,7 +129,7 @@ void loadCarScene() {
   
   Line line3 = new Line("Du troede det ville virke, selvfølgelig undgik billisten dig!", "");
   carScene.addLine(line3);
-  //####//^^
+  
   Line line4 = new Line("Det gjorde billisten bag den anden billist dog ikke, vedkommende ramte dig. Du døde dog ikke af bilen der ramte dig. Men du skulle indlægges. Der fik du noget hospitalsmad der gav dig voldsom madforgiftning du ikke kunne klare.", "");
   line4.changeBackground("bg_color_green");
   line4.changeScene("homeScene", 0);
@@ -219,23 +219,82 @@ void loadNewsScene() {
 void loadComputorScene() {
   
   Line line0 = new Line("Welcome to r/pcMasterracer", "RedditMoment");
-  computorScene.addLine(line0);
+  computerScene.addLine(line0);
   
   Line line1 = new Line("Going Back.", "");
   line1.changeScene("homeScene", 0);
-  computorScene.addLine(line1);
+  computerScene.addLine(line1);
 
 }
 
 void loadGasStationScene() {
   
-  Line line0 = new Line("Welcome to r/worklife", "RedditMoment");
+  Line line0 = new Line("Du blev ansat ved tankstationen med øjeblikkelig indsættelse.", "");
   gasStationScene.addLine(line0);
   
-  Line line1 = new Line("Going Back.", "");
-  line1.changeScene("homeScene", 0);
+  Line line1 = new Line("Der kommer en kunde ind ad døren. Kunden vil gerne købe en læskedrik.", "");
+  line1.changeBackground("bg_scene_job.png");
   gasStationScene.addLine(line1);
-
+  
+  Line line2 = new Line(line1.Text, "");
+  line2.addButton("Sig til kunden: \"Kort eller kontant?\"", 11);
+  line2.addButton("Sig til kunden: \"Stjernekastere er temmelige billige. Skal du have nogen med i købet?\"", 3);
+  gasStationScene.addLine(line2);
+  
+  Line line3 = new Line("Nej tak, jeg bruger ikke stjernekastere.", "Kunde");
+  gasStationScene.addLine(line3);
+  
+  Line line4 = new Line(line3.Text, "Kunde");
+  line4.addButton("Sig til kunden: \"Det var ellers en god mulighed.\"", 11);
+  line4.addButton("Sig til kunden: \"De er ellers rigtig fancy og sjove at lege med\"", 5);
+  gasStationScene.addLine(line4);
+  
+  Line line5 = new Line("Jeg har altså ikke brug for dem.", "Kunde");
+  gasStationScene.addLine(line5);
+  
+  Line line6 = new Line(line5.Text, "Kunde");
+  line6.addButton("Sig til kunden: \"Nå\"", 11);
+  line6.addButton("Sig til kunden: \"Så får du nogle på stationen!\"", 7);
+  gasStationScene.addLine(line6);
+  
+  Line line7 = new Line("Kunden forlader tanken med læskedrikken og de gratis stjernekastere.", "");
+  gasStationScene.addLine(line7);
+  
+  Line line8 = new Line("Kunden tænder stjernekasterne på tankstationens grund.", "");
+  line8.changeBackground("bg_scene_job_lastchoice.png");
+  gasStationScene.addLine(line8);
+  
+  Line line9 = new Line(line8.Text, "");
+  line9.addButton("Ignorer problemet.", 10);
+  line9.addButton("Råb: \"ARGHHH\"", 14);
+  gasStationScene.addLine(line9);
+  
+  Line line10 = new Line("Der skete heldigvis ikke noget uheldigt.", "");
+  line10.addObject("",0 ,0, width, height, 12);
+  gasStationScene.addLine(line10);
+  
+  Line line11 = new Line("Kunden siger \"kontant\" og betaler.", "");
+  gasStationScene.addLine(line11);
+  
+  Line line12 = new Line("Du fortsætter livet som tankstationsmedarbejder.", "");
+  gasStationScene.addLine(line12);
+  
+  Line line13 = new Line("Livet ender normalt som gammel person i en hospitalsseng efter mange kedelige år på tankstationen.", "");
+  line13.changeBackground("bg_color_red");
+  line13.changeScene("homeScene", 0);
+  gasStationScene.addLine(line13);
+  
+  Line line14 = new Line("Kunden får et shock og kaster stjernekasteren op i luften. Den lander i brønddækslet og tankstation springer i luften i en stor eksplosion.", "");
+  gasStationScene.addLine(line14);
+  
+  Line line15 = new Line("Kunden overlever mirakuløstvis, og du er den eneste omkommer i ulykken.", "");
+  gasStationScene.addLine(line15);
+  
+  Line line16 = new Line("Det skete, du gennemførte spillet. Føler du selv du gjorde det rigtige? Du gjorde ihvertfald en af de ting som vi havde planlagt inden du spillede spillet.", "");
+  line16.changeBackground("bg_color_green");
+  line16.changeScene("homeScene", 0);
+  gasStationScene.addLine(line16);
+  
 }
 
 void loadPresidentialScene() {
