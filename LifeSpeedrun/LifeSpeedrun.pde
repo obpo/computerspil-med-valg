@@ -56,11 +56,12 @@ void initGame() {
   loadNewsScene();
   loadComputorScene();
   loadGasStationScene();
+  loadLetterScene();
   loadPresidentialScene();
   
   // Set start 
   position = 0;
-  currentScene = monolougeScene;
+  currentScene = letterScene;
   
   // Ping Handlers to sync variables
   musicHandler();

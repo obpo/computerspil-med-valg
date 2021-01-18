@@ -63,6 +63,9 @@ void sceneTransitionHandler() { //<>//
       currentScene = gasStationScene;
       break;
       
+    case "letterScene":
+      currentScene = letterScene;
+      
     case "presidentialScene":
       currentScene = presidentialScene;
       break;
