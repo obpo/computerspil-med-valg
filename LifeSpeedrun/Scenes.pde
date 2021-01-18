@@ -6,9 +6,9 @@ Scene monolougeScene = new Scene("bg_color_black");
 Scene homeScene = new Scene("bg_scene_home.png");
 
 Scene outsideScene = new Scene("bg_scene_outside.png");
-  Scene pianoAdScene = new Scene("bg_scene_pianoad.png");
-  Scene carScene = new Scene("bg_scene_car.png");
-  Scene craneScene = new Scene("bg_scene_crane.png");
+Scene pianoAdScene = new Scene("bg_scene_pianoad.png");
+Scene carScene = new Scene("bg_scene_car.png");
+Scene craneScene = new Scene("bg_scene_crane.png");
 Scene clothesScene = new Scene("bg_scene_thief.png");
 Scene newsScene = new Scene("bg_scene_news.png");
 Scene computorScene = new Scene("bg_scene_pc.png");
@@ -207,12 +207,37 @@ void loadClothesScene() {
 
 void loadNewsScene() {
   
-  Line line0 = new Line("Welcome to r/worldnews", "RedditMoment");
+  Line line0 = new Line("Der var to artikler i avisen.", "");
+  line0.changeBackground("bg_scene_news.png");
+  line0.addObject("Mælkepriser", 287, 179, 336, 418, 1);
+  line0.addObject("JOB?", 668, 149, 297, 434, 3);
   newsScene.addLine(line0);
   
-  Line line1 = new Line("Going Back.", "");
-  line1.changeScene("homeScene", 0);
+  Line line1 = new Line("Du valgte at læse artiklen om de lokale mælkepriser.", "");
+  line1.changeBackground("bg_scene_news_article.png");
   newsScene.addLine(line1);
+  
+  Line line2 = new Line("Efter at have læst artiklen pakkede du den væk igen.", "");
+  line2.changeScene("homeScene", 0);
+  newsScene.addLine(line2);
+  
+  Line line3 = new Line("Du valgte at kigge på jobartiklen.", "");
+  line3.changeBackground("bg_scene_news_jobad.png");
+  newsScene.addLine(line3);
+  
+  Line line4 = new Line(line3.Text, "");
+  line4.addButton("Det lyder som en god mugelighed", 5);
+  line4.addButton("Det er nok ikke den smarteste ide", 6);
+  newsScene.addLine(line4);
+  
+  Line line5 = new Line("Du valgte at tage jobbet og tar nu hen til det.", "");
+  line5.changeScene("gasStationScene", 0);
+  newsScene.addLine(line5);
+  
+  Line line6 = new Line("Du valgte at lade vær med at tage jobbet.", "");
+  line6.changeScene("homeScene", 0);
+  newsScene.addLine(line6);
+  
 
 }
 
