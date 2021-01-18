@@ -56,7 +56,7 @@ void sceneTransitionHandler() { //<>//
       break;
     
     case "computorScene":
-      currentScene = computorScene;
+      currentScene = computerScene;
       break;
       
     case "gasStationScene":
