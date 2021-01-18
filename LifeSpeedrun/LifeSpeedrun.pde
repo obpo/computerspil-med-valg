@@ -54,14 +54,15 @@ void initGame() {
   loadCraneScene();
   loadClothesScene();
   loadNewsScene();
-  loadComputorScene();
+  loadComputerScene();
   loadGasStationScene();
+  loadInterScene();
   loadLetterScene();
   loadPresidentialScene();
   
   // Set start 
   position = 0;
-  currentScene = letterScene;
+  currentScene = monolougeScene;
   
   // Ping Handlers to sync variables
   musicHandler();

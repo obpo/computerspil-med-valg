@@ -1,6 +1,6 @@
- //<>// //<>//
+ //<>// //<>// //<>//
 // Handles transitions
-void lineTransitionHandler() { //<>//
+void lineTransitionHandler() { //<>// //<>//
   
   musicHandler();
   objectAreas = new ArrayList<int[]>();
@@ -18,7 +18,7 @@ void lineTransitionHandler() { //<>//
   
 }
 
-void sceneTransitionHandler() { //<>//
+void sceneTransitionHandler() { //<>// //<>//
   
   int temp = currentScene.lines.get(position).startingPoint;
   
@@ -55,7 +55,7 @@ void sceneTransitionHandler() { //<>//
       currentScene = newsScene;
       break;
     
-    case "computorScene":
+    case "computerScene":
       currentScene = computerScene;
       break;
       
@@ -63,8 +63,13 @@ void sceneTransitionHandler() { //<>//
       currentScene = gasStationScene;
       break;
       
+    case "interScene":
+      currentScene = interScene;
+      break;
+      
     case "letterScene":
       currentScene = letterScene;
+      break;
       
     case "presidentialScene":
       currentScene = presidentialScene;
@@ -76,7 +81,7 @@ void sceneTransitionHandler() { //<>//
   }
   
   position = temp;
-  lineTransitionHandler();
+  lineTransitionHandler(); //<>//
 
 }
 
@@ -172,7 +177,7 @@ void imgHandler() { //<>//
     for (int i = 0; i < currentScene.lines.get(position).newPos.size(); i++) {
       image(textbutton, 310, objectAreas.get(i)[1], 660, 70); 
     }
-  }
+  } //<>//
   
 }
 
@@ -185,14 +190,14 @@ void textHandler() { //<>//
   text(currentScene.lines.get(position).Person, 40, 600);
   
   textSize(14);
-  text(currentScene.lines.get(position).Text, 40, 615, 1220, 85);
+  text(currentScene.lines.get(position).Text, 40, 615, 1200, 85);
   
   if (currentScene.lines.get(position).buttons) {
     textSize(16);
     for (int i = 0; i < currentScene.lines.get(position).newPos.size(); i++) {
       text(currentScene.lines.get(position).buttonText.get(i), 340, 140+80*i);
     }
-  }
+  } //<>//
 
 }
 

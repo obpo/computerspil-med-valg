@@ -11,8 +11,9 @@ Scene carScene = new Scene("bg_scene_car.png");
 Scene craneScene = new Scene("bg_scene_crane.png");
 Scene clothesScene = new Scene("bg_scene_thief.png");
 Scene newsScene = new Scene("bg_scene_news.png");
-Scene computorScene = new Scene("bg_scene_pc.png");
-  Scene gasStationScene = new Scene("bg_scene_job.png");
+Scene computerScene = new Scene("bg_scene_pc.png");
+Scene gasStationScene = new Scene("bg_scene_job.png");
+Scene interScene = new Scene("bg_scene_interview.png");
 Scene letterScene = new Scene("bg_scene_letter.png");
 Scene presidentialScene = new Scene("bg_scene_mrpresident.png");
 
@@ -58,7 +59,7 @@ void loadHomeScene() {
     homeScene.addLine(line3);
     
     Line line4 = new Line("Du valgte at chekke computeren.", "");
-    line4.changeScene("computorScene", 0);
+    line4.changeScene("computerScene", 0);
     homeScene.addLine(line4);
     
     Line line5 = new Line("Du valgte at ligge dig til at sove igen.", "");
@@ -242,75 +243,75 @@ void loadNewsScene() {
 
 }
 
-void loadComputorScene() {
+void loadComputerScene() {
   
   Line line0 = new Line("", "");
   line0.changeBackground("bg_scene_pc.png");
   line0.addObject("Sluk Computer", 333, 213, 100, 100, 1);
   line0.addObject("Jobsøger", 344, 36, 100, 100, 2);
-  computorScene.addLine(line0);
+  computerScene.addLine(line0);
   
   Line line1 = new Line("Du valgte at slukke computeren igen.", "");
   line1.changeScene("homeScene", 0);
-  computorScene.addLine(line1);
+  computerScene.addLine(line1);
   
   Line line2 = new Line("Du valgte at åbne jobsøgeren.", "");
   line2.changeBackground("bg_scene_pc_jobsite.png");
   line2.addObject("Tankstation", 414, 129, 140, 117, 3);
   line2.addObject("Kattekafe", 655, 129, 140, 117, 5);
   line2.addObject("Luk Vindue", 814, 64, 10, 10, 0);
-  computorScene.addLine(line2);
+  computerScene.addLine(line2);
   
   Line line3 = new Line("Du valgte at kigge på tankstaions jobbet.", "");
   line3.changeBackground("bg_scene_pc_jobad.png");
   line3.addObject("Take It!", 745, 197, 71, 65, 4);
   line3.addObject("Luk Vindue", 814, 64, 10, 10, 0);
-  computorScene.addLine(line3);
+  computerScene.addLine(line3);
   
   Line line4 = new Line("Du valgte at tage jobbet og tar nu hen til det.", "");
   line4.changeScene("gasStationScene", 0);
-  computorScene.addLine(line4);
+  computerScene.addLine(line4);
   
   Line line5 = new Line("Du valgte at kigge på kattecafé jobbet", "");
   line5.changeBackground("bg_scene_pc_catad.png");
   line5.addObject("Take It!", 745, 197, 71, 65, 6);
   line5.addObject("Luk Vindue", 814, 64, 10, 10, 0);
-  computorScene.addLine(line5);
+  computerScene.addLine(line5);
   
   Line line6 = new Line("Du valgte at tage jobbet og tar nu hen til det.", "");
   line6.changeScene("interScene", 0);
-  computorScene.addLine(line6);
+  computerScene.addLine(line6);
 
 }
 
 void loadGasStationScene() {
   
   Line line0 = new Line("Du blev ansat ved tankstationen med øjeblikkelig indsættelse.", "");
+  line0.changeBackground("bg_scene_job.png");
   gasStationScene.addLine(line0);
   
   Line line1 = new Line("Der kommer en kunde ind ad døren. Kunden vil gerne købe en læskedrik.", "");
-  line1.changeBackground("bg_scene_job.png");
   gasStationScene.addLine(line1);
   
   Line line2 = new Line(line1.Text, "");
-  line2.addButton("Sig til kunden: \"Kort eller kontant?\"", 11);
-  line2.addButton("Sig til kunden: \"Stjernekastere er temmelige billige. Skal du have nogen med i købet?\"", 3);
+  line2.addButton("Sig: \"Kort eller kontant?\"", 11);
+  line2.addButton("Sig: \"Stjernekastere er temmelige billige. Skal du have nogen med i købet?\"", 3);
   gasStationScene.addLine(line2);
   
   Line line3 = new Line("Nej tak, jeg bruger ikke stjernekastere.", "Kunde");
   gasStationScene.addLine(line3);
   
   Line line4 = new Line(line3.Text, "Kunde");
-  line4.addButton("Sig til kunden: \"Det var ellers en god mulighed.\"", 11);
-  line4.addButton("Sig til kunden: \"De er ellers rigtig fancy og sjove at lege med\"", 5);
+  line4.addButton("Sig: \"Det var ellers en god mulighed.\"", 11);
+  line4.addButton("Sig: \"De er ellers rigtig fancy og sjove at lege med\"", 5);
   gasStationScene.addLine(line4);
   
   Line line5 = new Line("Jeg har altså ikke brug for dem.", "Kunde");
   gasStationScene.addLine(line5);
   
   Line line6 = new Line(line5.Text, "Kunde");
-  line6.addButton("Sig til kunden: \"Nå\"", 11);
-  line6.addButton("Sig til kunden: \"Så får du nogle på stationen!\"", 7);
+  line6.addButton("Sig: \"Nå\"", 11);
+  line6.addButton("Sig: \"Så får du nogle på stationen!\"", 7);
   gasStationScene.addLine(line6);
   
   Line line7 = new Line("Kunden forlader tanken med læskedrikken og de gratis stjernekastere.", "");
@@ -353,6 +354,82 @@ void loadGasStationScene() {
   
 }
 
+void loadInterScene(){
+  
+  Line line0 = new Line("Wowowowo, hvad er det her for noget, det er ikke en del af spillet. Hvor er katte caféen?","Program");
+  line0.changeBackground("bg_color_black");
+  interScene.addLine(line0);
+  
+  Line line1 = new Line("Jeg leder lige i filerne, det kan være jeg kan finde noget. Det beklager jeg... Kigge kigge kigge... kigge kigge kigge... Jeg er en kode jeg har ingen øjne. ha ha","Program");
+  interScene.addLine(line1);
+  
+  Line line2 = new Line("Arghh... Det er din skyld, du læste ikke betingelserne for katte jobbet. Dine øjne åbner ikke automatisk her. Du skal lave noget selv. Jeg smutter igen, hej hej","Program");
+  line2.addButton("Åben dine øjne",3);
+  interScene.addLine(line2);
+  
+  Line line3 = new Line("Goddag","Skræmmende person");
+  line3.changeBackground("bg_scene_interview.png");
+  interScene.addLine(line3);
+  
+  Line line4 = new Line("Er du klar til at gøre det her?!","I hvert fald ikke en kattecafé ejer");
+  line4.addButton("Sig: øhh... Gøre hvad",5);
+  interScene.addLine(line4);
+  
+  Line line5 = new Line("Kattejobbet er ikke rigtigt, men du påstår du er stærk og modig. Vi har brug for folk som dig. Dem vi havde før er... Vi har brug for nye. Er du klar på dit livs største arbejde og udfordring","Stadig ikke ejeren af en katte café");
+  line5.addButton("Sig: Nej.",6);
+  line5.addButton("Sig: Hvis jeg klar til en kattecafé er jeg klar til alt",7);
+  interScene.addLine(line5);
+  
+  Line line6 = new Line("Regeringen mente du vidste for meget. De slettede alt hvad du vidste indtil videre. Men med den slettede hukkomelse røg alle dine problemmer og tanker om at speedrunne livet","");
+  line6.changeBackground("bg_color_red");
+  line6.changeScene("homeScene", 0);
+  interScene.addLine(line6);
+  
+  Line line7 = new Line("Det er et meget vigtigt job, der er derfor en lang række sikkerhedsspørgsmål somk vi skal stille. Eller i hvertfald 1.","Person som aldrig har haft en katte café");
+  interScene.addLine(line7);
+  
+  Line line8 = new Line("Er du villig til at at ofre dit liv for præsidenten","?");
+  line8.addButton("Sig: arghhh, ikke lige alt, ikke for præsidenten",9);
+  line8.addButton("Alt!",16);
+  interScene.addLine(line8);
+  
+  Line line9 = new Line("Det udelukker lidt de planer vi havde med dig, men vi kan stadig bruge dig","Hvad er en kattecafé ejer overhovedet");
+  line9.addButton("Sig: Jeg lytter",10);
+  interScene.addLine(line9);
+  
+  Line line10 = new Line("Det håber jeg da du gør, eller så har jeg spildt alt min tid... Vi skal infiltrere et bandemiljø og nedlægge banden i en vildt sej kamp. Derved stoppe deres ulovlige handlinger","Ikke relateret til katte overhoved person");
+  interScene.addLine(line10);
+  
+  Line line11 = new Line("Er du klar på sådan en udfordring?","En kat?");
+  line11.addButton("Sig: Jeg har desværre ikke tid",12);
+  line11.addButton("Sig: Markant bedre end et kattejob, det gør jeg gerne",14);
+  interScene.addLine(line11);
+  
+  Line line12 = new Line("Vi kan ikke bruge dig til noget","Person");
+  line12.addButton("Nå...",13);
+  interScene.addLine(line12);
+  
+  Line line13 = new Line("Din hukommelse blev slettet af regeringen sammen med alle dine problemmer, og målet om at speedrunne livet. Men det var altid noget underligt over den dag. Den ene dag i dit liv som du ikke kan huske du har levet","");
+  line13.changeBackground("bg_color_red");
+  line13.changeScene("homeScene",0);
+  interScene.addLine(line13);
+  
+  Line line14 = new Line("Du vil modtage et brev snart, meget snart. Hvis ses til angrebbet. Farvel","Indsæt mærkeligt navn her:");
+  line14.addButton("Hygge hejsa",15);
+  line14.addButton("Farvel",15);
+  interScene.addLine(line14);
+  
+  Line line15 = new Line("Du forladte det mærkelige mødested, underligt nok lå det i lejligheden lige ved siden af. Lille verden","");
+  line15.changeBackground("bg_color_black");
+  line15.changeScene("letterScene",0);
+  interScene.addLine(line15);
+  
+  Line line16 = new Line("Jeg tager dit ord meget bogstaveligt","Katte café ejer vil passe godt person");
+  line16.changeScene("presidentialScene",0);
+  interScene.addLine(line16);
+  
+}
+
 void loadLetterScene(){
   
   Line line0 = new Line("Da du ankom, tjekkede du din postkasse. Til din overraskelse var brevet allerede ankommet", "");
@@ -392,7 +469,7 @@ void loadLetterScene(){
   
   Line line8 = new Line("Hvordan vil du præsentere regeringens planer?", "");
   line8.addButton("Jeg har måske nogle ting i kan bruge, jeg ved ikke om i er interreseret?", 9);
-  line8.addButton("HEY! jeg har nogle vigtige informationer, det handler om regering, viden for penge!", 12);
+  line8.addButton("HEY! jeg har nogle vigtige informationer, om regering. Viden for penge!", 12);
   letterScene.addLine(line8);
   
   Line line9 = new Line("Hvad er det for en ynkelig måde at snakke på. Opfør dig ordenligt når du snakker til os","Banden");
