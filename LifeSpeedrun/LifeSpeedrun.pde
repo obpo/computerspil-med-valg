@@ -49,18 +49,19 @@ void initGame() {
   loadMonolouge();
   loadHomeScene();
   loadOutsideScene();
-    loadPianoAdScene();
-    loadCarScene();
-    loadCraneScene();
+  loadPianoAdScene();
+  loadCarScene();
+  loadCraneScene();
   loadClothesScene();
   loadNewsScene();
   loadComputorScene();
   loadGasStationScene();
+  loadLetterScene();
   loadPresidentialScene();
   
   // Set start 
   position = 0;
-  currentScene = monolougeScene;
+  currentScene = letterScene;
   
   // Ping Handlers to sync variables
   musicHandler();
