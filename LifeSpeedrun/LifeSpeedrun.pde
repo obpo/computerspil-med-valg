@@ -3,6 +3,7 @@ import processing.sound.*;
 // Game Variables
 int position;
 ArrayList<int[]> objectAreas = new ArrayList<int[]>();
+boolean mouseReleased = true;
 
 // Image Scenes
 PImage scene_test;
@@ -63,7 +64,7 @@ void initGame() {
   
   // Ping Handlers to sync variables
   musicHandler();
-  lineTransitionHandler();
+  lineTransitionHandler(); //<>//
 
 }
 
@@ -123,16 +124,21 @@ void draw() {
  
   imgHandler();    // Draw Images
   textHandler();   // Write Text
+  println(position);
+  
+  // Test if mouse was pressd of released on the current frame
+  if (mousePressed && mouseReleased) {
+    mouseReleased = false;
+    clicked();
+  } else if (!mousePressed && !mouseReleased) {
+    mouseReleased = true;
+  }
   
 }
 
 // Do things when mouse is clicked
-void mouseClicked() {
+void clicked() {
   
-  //print(mouseX);
-  //print("x");
-  //print(mouseY);
-  //println();
   
   // If it is a normal go to next scene
   if (currentScene.lines.get(position).interactable == false) {
