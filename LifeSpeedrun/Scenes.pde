@@ -286,31 +286,31 @@ void loadComputorScene() {
 void loadGasStationScene() {
   
   Line line0 = new Line("Du blev ansat ved tankstationen med øjeblikkelig indsættelse.", "");
+  line0.changeBackground("bg_scene_job.png");
   gasStationScene.addLine(line0);
   
   Line line1 = new Line("Der kommer en kunde ind ad døren. Kunden vil gerne købe en læskedrik.", "");
-  line1.changeBackground("bg_scene_job.png");
   gasStationScene.addLine(line1);
   
   Line line2 = new Line(line1.Text, "");
-  line2.addButton("Sig til kunden: \"Kort eller kontant?\"", 11);
-  line2.addButton("Sig til kunden: \"Stjernekastere er temmelige billige. Skal du have nogen med i købet?\"", 3);
+  line2.addButton("Sig: \"Kort eller kontant?\"", 11);
+  line2.addButton("Sig: \"Stjernekastere er temmelige billige. Skal du have nogen med i købet?\"", 3);
   gasStationScene.addLine(line2);
   
   Line line3 = new Line("Nej tak, jeg bruger ikke stjernekastere.", "Kunde");
   gasStationScene.addLine(line3);
   
   Line line4 = new Line(line3.Text, "Kunde");
-  line4.addButton("Sig til kunden: \"Det var ellers en god mulighed.\"", 11);
-  line4.addButton("Sig til kunden: \"De er ellers rigtig fancy og sjove at lege med\"", 5);
+  line4.addButton("Sig: \"Det var ellers en god mulighed.\"", 11);
+  line4.addButton("Sig: \"De er ellers rigtig fancy og sjove at lege med\"", 5);
   gasStationScene.addLine(line4);
   
   Line line5 = new Line("Jeg har altså ikke brug for dem.", "Kunde");
   gasStationScene.addLine(line5);
   
   Line line6 = new Line(line5.Text, "Kunde");
-  line6.addButton("Sig til kunden: \"Nå\"", 11);
-  line6.addButton("Sig til kunden: \"Så får du nogle på stationen!\"", 7);
+  line6.addButton("Sig: \"Nå\"", 11);
+  line6.addButton("Sig: \"Så får du nogle på stationen!\"", 7);
   gasStationScene.addLine(line6);
   
   Line line7 = new Line("Kunden forlader tanken med læskedrikken og de gratis stjernekastere.", "");
