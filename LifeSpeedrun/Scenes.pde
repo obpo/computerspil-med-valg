@@ -243,12 +243,43 @@ void loadNewsScene() {
 
 void loadComputorScene() {
   
-  Line line0 = new Line("Welcome to r/pcMasterracer", "RedditMoment");
+  Line line0 = new Line("", "");
+  line0.changeBackground("bg_scene_pc.png");
+  line0.addObject("Sluk Computer", 333, 213, 100, 100, 1);
+  line0.addObject("Jobsøger", 344, 36, 100, 100, 2);
   computorScene.addLine(line0);
   
-  Line line1 = new Line("Going Back.", "");
+  Line line1 = new Line("Du valgte at slukke computeren igen.", "");
   line1.changeScene("homeScene", 0);
   computorScene.addLine(line1);
+  
+  Line line2 = new Line("Du valgte at åbne jobsøgeren.", "");
+  line2.changeBackground("bg_scene_pc_jobsite.png");
+  line2.addObject("Tankstation", 414, 129, 140, 117, 3);
+  line2.addObject("Kattekafe", 655, 129, 140, 117, 5);
+  line2.addObject("Luk Vindue", 814, 64, 10, 10, 0);
+  computorScene.addLine(line2);
+  
+  Line line3 = new Line("Du valgte at kigge på tankstaions jobbet.", "");
+  line3.changeBackground("bg_scene_pc_jobad.png");
+  line3.addObject("Take It!", 745, 197, 71, 65, 4);
+  line3.addObject("Luk Vindue", 814, 64, 10, 10, 0);
+  computorScene.addLine(line3);
+  
+  Line line4 = new Line("Du valgte at tage jobbet og tar nu hen til det.", "");
+  line4.changeScene("gasStationScene", 0);
+  computorScene.addLine(line4);
+  
+  Line line5 = new Line("Du valgte at kigge på kattecafé jobbet", "");
+  line5.changeBackground("bg_scene_pc_catad.png");
+  line5.addObject("Take It!", 745, 197, 71, 65, 6);
+  line5.addObject("Luk Vindue", 814, 64, 10, 10, 0);
+  computorScene.addLine(line5);
+  
+  Line line6 = new Line("Du valgte at tage jobbet og tar nu hen til det.", "");
+  line6.changeScene("interScene", 0);
+  computorScene.addLine(line6);
+  
 
 }
 
