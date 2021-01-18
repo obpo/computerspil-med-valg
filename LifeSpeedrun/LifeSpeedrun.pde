@@ -113,8 +113,8 @@ void setup(){ //<>//
   
   // Load Music
   text("Loading Music", 0, 60);
-  backgroundMusic = new SoundFile(this, "bgm_test.mp3");
-  backgroundMusic.amp(0.05);
+  backgroundMusic = new SoundFile(this, "bgm_life_speedrun_soundtrack.wav");
+  backgroundMusic.amp(0.1);
   
   // Initialize Game
   initGame();

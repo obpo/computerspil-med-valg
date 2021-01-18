@@ -20,14 +20,21 @@ Scene presidentialScene = new Scene("bg_scene_mrpresident.png");
 
 void loadMonolouge() {
   
-  Line line0 = new Line("Har livet en mening?", "");
+  Line line0 = new Line("Har livet en mening?", "Programmet");
   line0.addButton("Ja", 1);
   line0.addButton("Nej", 1);
   monolougeScene.addLine(line0);
   
-  Line line1 = new Line("Uanset hvad du svarede, så ville det ikke gøre nogen foreskel. Du ville altid ende her.", "");
-  line1.changeScene("homeScene", 0);
+  Line line1 = new Line("Uanset hvad du svarede, så ville det ikke gøre nogen foreskel. Du ville altid ende her.", "Programmet");
   monolougeScene.addLine(line1);
+  
+  Line line2 = new Line("Spillets karakter er lige stået op. Dit mål, få karakteren dræbt så hurtigt som muligt. Den ved det ikke, men du skal tage nogle hverdagsvalg for den. Knæk og bræk… karakteren!", "Programmet");
+  line2.addButton("ok", 3);
+  monolougeScene.addLine(line2);
+  
+  Line line3 = new Line("...", "Programmet");
+  line3.changeScene("homeScene", 0);
+  monolougeScene.addLine(line3);
   
   
   
@@ -501,11 +508,67 @@ void loadLetterScene(){
 
 void loadPresidentialScene() {
   
-  Line line0 = new Line("Welcome to r/mrpresident", "RedditMoment");
+  Line line0 = new Line("Om få timer skal presidenten tale offentligt, der er stor risiko for drabsforsøg","Kat kat kat katteperson");
+  line0.changeBackground("bg_scene_interview.png");
   presidentialScene.addLine(line0);
   
-  Line line1 = new Line("Going Back.", "");
-  line1.changeScene("homeScene", 0);
+  Line line1 = new Line("Er du klar allerede der?","Måske en hundecafé ejer");
+  line1.addButton("Ja, selvfølgelig",2);
+  line1.addButton("Nej, det for tidligt",12);
   presidentialScene.addLine(line1);
+  
+  Line line2 = new Line("Perfekt, du er en fantastisk arbejder","Kat, plat, mat, navn");
+  presidentialScene.addLine(line2);
+  
+  Line line3 = new Line("Eftersom at du er ny, får du muligheden for at vælge din position. Vil du stå direkte ved siden af presidenten, første mand til at risikere det hele. Eller vil du tag en afslappende tilgang, og have en person mellem dig og presidenten?","Miav manden");
+  line3.addButton("Sig: Jeg holder mig lige lidt bagved, jeg er jo ny",4);
+  line3.addButton("Sig: Jeg går all-in, ved siden af presidenten",7);
+  presidentialScene.addLine(line3);
+  
+  Line line4 = new Line("Et par timer efter til mødet","");
+  line4.changeBackground("bg_color_black");
+  presidentialScene.addLine(line4);
+  
+  Line line5 = new Line("Åh Nej! En person har stilt sig op for at prøve at skyde presidenten","");
+  line5.changeBackground("bg_scene_mrpresident.png");
+  line5.addButton("Åh NEJ!",6);
+  presidentialScene.addLine(line5);
+  
+  Line line6 = new Line("Men din skrækkelige position har gjort så du ikke kan gøre noget ved problemmet. hmmmmmm","Skuffet computer program");
+  line6.addButton("Ups",12);
+  presidentialScene.addLine(line6);
+  
+  Line line7 = new Line("Et par timer efter til mødet","");
+  line7.changeBackground("bg_color_black");
+  presidentialScene.addLine(line7);
+  
+  Line line8 = new Line("Åh Nej! En person har stilt sig op for at prøve at skyde presidenten","");
+  line8.changeBackground("bg_scene_mrpresident.png");
+  presidentialScene.addLine(line8);
+  
+  Line line9 = new Line("REAGER!","");
+  line9.addButton("Forsøg at hop ind foran presidenten",11);
+  line9.addButton("Ikke lige nu, jeg står lige så godt",10);
+  presidentialScene.addLine(line9);
+  
+  Line line10 = new Line("Wow en sand helt. Personen ved siden af dig reagerede hurtigt på din stilleståning. Han fejlede sit hop, ramte dig og du røg ind foran patronen. Et heroisk øjeblik. En fantastisk ende","Stolt program");
+  line10.changeBackground("bg_color_green");
+  line10.changeScene("homeScene", 0);
+  presidentialScene.addLine(line10);
+  
+  Line line11 = new Line("Du fik aldrig nogen træning, det var et skrækkeligt hop. Har du aldrig hoppet før? Du landede 2 meter ved siden af presidenten.","");
+  line11.changeBackground("bg_color_black");
+  line11.addButton("Accepter din skæbne, og modtag en straf for dit forsøg",12);
+  presidentialScene.addLine(line11);
+  
+  Line line12 = new Line("Din skæbne ender her så, men vi kan bruge dig til noget helt andet. Vi har indført nyt menukort i presidentens hus. Kartoffler som det eneste, og de skal skraldes","Hunde person, ikke katte person");
+  line12.changeBackground("bg_scene_interview.png");
+  presidentialScene.addLine(line12);
+  
+  Line line13 = new Line("Det var ikke godt. Det bliver til mange kartoffler igennem et helt liv... Hav et godt kartoffelskralde liv","");
+  line13.changeBackground("bg_color_red");
+  line13.changeScene("homeScene", 0);
+  presidentialScene.addLine(line13);
+
 
 }
