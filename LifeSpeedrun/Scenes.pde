@@ -5,12 +5,15 @@ Scene currentScene;
 Scene monolougeScene = new Scene("bg_color_black");
 Scene homeScene = new Scene("bg_scene_home.png");
 
-Scene outsideScene = new Scene("");
-Scene clothesScene = new Scene("");
-Scene newsScene = new Scene("");
-Scene computorScene = new Scene("");
-Scene gasStationScene = new Scene("");
-Scene presidentialScene = new Scene("");
+Scene outsideScene = new Scene("bg_scene_outside.png");
+  Scene pianoAdScene = new Scene("bg_scene_pianoad.png");
+  Scene carScene = new Scene("bg_scene_car.png");
+  Scene craneScene = new Scene("bg_scene_crane.png");
+Scene clothesScene = new Scene("bg_scene_thief.png");
+Scene newsScene = new Scene("bg_scene_news.png");
+Scene computorScene = new Scene("bg_scene_pc.png");
+Scene gasStationScene = new Scene("bg_scene_job.png");
+Scene presidentialScene = new Scene("bg_scene_mrpresident.png");
 
 
 void loadMonolouge() {
@@ -20,7 +23,7 @@ void loadMonolouge() {
   line0.addButton("Nej", 1);
   monolougeScene.addLine(line0);
   
-  Line line1 = new Line("Uanset hvad du svarrede, så ville det ikke gøre nmogen foreskeld. Du ville altid ende her.", "");
+  Line line1 = new Line("Uanset hvad du svarede, så ville det ikke gøre nogen foreskel. Du ville altid ende her.", "");
   line1.changeScene("homeScene", 0);
   monolougeScene.addLine(line1);
   
@@ -35,7 +38,7 @@ void loadHomeScene() {
     line0.addObject("Door", 166, 203, 58, 91, 1);
     line0.addObject("Clothes", 472, 342, 212, 128, 2);
     line0.addObject("Newspaper", 244, 386, 127, 100, 3);
-    line0.addObject("Computor", 460, 83, 124, 106, 4);
+    line0.addObject("Computer", 460, 83, 124, 106, 4);
     line0.addObject("Bed", 876, 92, 175, 314, 5);
     line0.changeBackground("bg_scene_home.png");
     line0.startMusic();
@@ -70,13 +73,98 @@ void loadHomeScene() {
 
 void loadOutsideScene() {
   
-  Line line0 = new Line("Welcome to r/outside", "RedditMoment");
+  Line line0 = new Line("Du befinder dig udenfor.", "");
   outsideScene.addLine(line0);
   
-  Line line1 = new Line("Going Back.", "");
-  line1.changeScene("homeScene", 0);
+  Line line1 = new Line("Du ser et reklameskilt for et klaver.", "");
+  line1.addButton("Gå hen til skiltet", 2);
+  line1.addButton("Fortsæt hen ad vejen", 3);
   outsideScene.addLine(line1);
+  
+  Line line2 = new Line("Du går hen til skiltet.", "");
+  line2.changeScene("pianoAdScene", 0);
+  outsideScene.addLine(line2);
+  
+  Line line3 = new Line("Du fortsætter hen ad vejen.", "");
+  line3.changeScene("carScene", 0);
+  outsideScene.addLine(line3);
 
+}
+
+void loadPianoAdScene() {
+  
+  Line line0 = new Line("Der er mulighed for at købe et klaver.", "");
+  pianoAdScene.addLine(line0);
+  
+  Line line1 = new Line("Vil du købe klaveret?", "");
+  line1.addButton("Ja, jeg køber det!", 2);
+  line1.addButton("Nej, jeg springer over...", 3);
+  pianoAdScene.addLine(line1);
+  
+  Line line2 = new Line("Du købte klaveret.", "");
+  line2.changeScene("craneScene", 0);
+  pianoAdScene.addLine(line2);
+  
+  Line line3 = new Line("Du købte ikke klaveret.", "");
+  line3.changeScene("carScene", 0);
+  pianoAdScene.addLine(line3);
+  
+}
+
+void loadCarScene() {
+  
+  Line line0 = new Line("Du fortsatte ned ad vejen, men der var ikke noget spændende, så du gik ud midt på vejen.", "");
+  line0.changeBackground("bg_scene_car.png");
+  carScene.addLine(line0);
+  
+  Line line1 = new Line("Der kommer en bil mod dig.", "");
+  line1.addButton("Gå tilbage til fortovet", 2);
+  line1.addButton("Bliv stående og se hvad der sker", 3);
+  carScene.addLine(line1);
+  
+  Line line2 = new Line("Det var tæt på! Hvad skulle man dog gøre efter sådan en nær-døds-oplevelse?", "");
+  line2.addButton("Gå tilbage til lejligheden og tag et hvil.", 5);
+  line2.addButton("Tag ud og handle, der mangler sikkert mælk i køleskabet.", 6);
+  
+  Line line3 = new Line("Du troede det ville virke, selvfølgelig undgik billisten dig!", "");
+  carScene.addLine(line3);
+  //####//^^
+  Line line4 = new Line("Det gjorde billisten bag den anden billist dog ikke, vedkommende ramte dig. Du døde dog ikke af bilen der ramte dig. Men du skulle indlægges. Der fik du noget hospitalsmad der gav dig voldsom madforgiftning du ikke kunne klare.", "");
+  line4.changeBackground("bg_color_green");
+  line4.changeScene("homeScene", 0);
+  carScene.addLine(line4);
+  
+  Line line5 = new Line("På vejen tilbage til din lejlighed så du en fugl. Ej hvor spændende.", "");
+  line5.changeScene("homeScene", 5);
+  carScene.addLine(line5);
+  
+  Line line6 = new Line("Efter en tur i supermarkedet var det tid til at komme hjem med den manglende mælk og få et hvil.", "");
+  line6.changeScene("homeScene", 5);
+  carScene.addLine(line6);
+  
+}
+
+void loadCraneScene() {
+  
+  Line line0 = new Line("Du skal have have klaveret op i din lejlighed, men det kan ikke være i opgangen. Derfor skal det hejses op med en kran.", "");
+  line0.changeBackground("bg_scene_crane.png");
+  craneScene.addLine(line0);
+  
+  Line line1 = new Line("Kranføren ankommer, men hans reb er slidt. Han kan komme tilbage med et nyt reb, hvilket tager tid, eller han kan bruge det slidte og du får en rabat.", "");
+  line1.addButton("Lad kranføren hente et nyt reb", 2);
+  line1.addButton("Benytte det svage reb og få en rabat", 3);
+  craneScene.addLine(line1);
+  
+  Line line2 = new Line("Kranføren henter et nyt reb. Han får klaveret op i lejligheden uden fejl. Fornuften var det rette sted. Men det var jo ikke meningen. Du endte med få klaveret op i lejligheden. Du øvede og øvede. Din musik spredte sig over hele verdenen og du levede et langt liv med en succesfuld musik karriere.", "");
+  line2.changeBackground("bg_color_red");
+  line2.changeScene("homeScene", 0);
+  craneScene.addLine(line2);
+  
+  Line line3 = new Line("Kranføren begynder med det samme med det slidte reb. Hov, det kunne ingen havde forudset. Rebet kunne ikke holde til klaveret efter noget tid. Og du havde selvfølgelig valgt at stille dig under klaveret mens i hejste det op.", "");
+  line3.changeBackground("bg_color_green");
+  line3.changeScene("homeScene", 0);
+  craneScene.addLine(line3);
+  
 }
 
 void loadClothesScene() {

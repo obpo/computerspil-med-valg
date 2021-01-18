@@ -48,6 +48,9 @@ void initGame() {
   loadMonolouge();
   loadHomeScene();
   loadOutsideScene();
+    loadPianoAdScene();
+    loadCarScene();
+    loadCraneScene();
   loadClothesScene();
   loadNewsScene();
   loadComputorScene();
