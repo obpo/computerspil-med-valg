@@ -81,12 +81,38 @@ void loadOutsideScene() {
 
 void loadClothesScene() {
 
-  Line line0 = new Line("Welcome to r/clothing", "RedditMoment");
+  Line line0 = new Line("Da du nåede ned i vaskekældren, var der til dit store shock en tyv der tog 1 par af dine underbukser","");
+  line0.changeBackground("bg_scene_thief.png");
   clothesScene.addLine(line0);
   
-  Line line1 = new Line("Going Back.", "");
-  line1.changeScene("homeScene", 0);
+  Line line1 = new Line("Det var nok et af de bedste par underbukser du havde.","");
+  line1.addButton("Jagt underbuksetyven",2);
+  line1.addButton("Han har sikkert mere brug for dem end mig",3);
   clothesScene.addLine(line1);
+  
+  Line line2 = new Line("Jagten på underbuksetyven førte dig udenfor, men han var ingen steder at blive set. Vasketøjet var ligeyldigt nu, livet udenfor havde fanget din opmærksomhed.","");
+  line2.changeBackground("bg_scene_outside.png");
+  line2.changeScene("outsideScene",0);
+  clothesScene.addLine(line2);
+  
+  Line line3 = new Line("På vejen op til din lejligheden, i opgangen, der ser du en forhindring. Der er en gammel person på vej op ad trapperne.","");
+  line3.changeBackground("bg_scene_fart.png");
+  clothesScene.addLine(line3);
+  
+  Line line4 = new Line("Trangen til at slå en prut opstår i dig. DU kan vente, men hvem ved hvilket kaos det vil skabe i din lille lejlighed.","");
+  line4.addButton("Tag din ulejlighed, og slå prutten",5);
+  line4.addButton("Vær en høffelig person, der spare de ældres for denne ækelhed",6);
+  clothesScene.addLine(line4);
+  
+  Line line5 = new Line("Det var en voldsom prut, ad. Det gamle menneske fik et enormt shock og faldt begover. Det resulterede i at du røg med i faldet. I det du landede kækkede du nakken. Den gamle person overlevede heldigvis faldet ved at lande på dig...","");
+  line5.changeBackground("bg_color_green");
+  line5.stopMusic();
+  line5.changeScene("homeScene",0);
+  clothesScene.addLine(line5);
+  
+  Line line6 = new Line("Det var godt du har dine manere i orden.","");
+  line6.changeScene("homeScene",0);
+  clothesScene.addLine(line6);
   
 }
 
