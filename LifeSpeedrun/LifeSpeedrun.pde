@@ -61,7 +61,7 @@ void initGame() {
   
   // Set start 
   position = 0;
-  currentScene = letterScene;
+  currentScene = monolougeScene;
   
   // Ping Handlers to sync variables
   musicHandler();
